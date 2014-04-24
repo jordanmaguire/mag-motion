@@ -1,5 +1,10 @@
 class UIView
 
+  include ConsoleColors
+
+  # By observation and trial and error, I've determined that this is the default animation period
+  DEFAULT_ANIMATION_DURATION = 0.3
+
   def addSubviews(*subviews)
     subviews.each { |subview| addSubview(subview) }
   end
@@ -18,6 +23,16 @@ class UIView
 
   def top
     frame.top
+  end
+
+  def to_s
+    [
+      "#{textReset}[0x#{object_id.to_s(16)}] ",
+      "#{cyanColor}#{self.class.name}#{textReset} ",
+      "(",
+      frame.to_s,
+      ")"
+    ].join("")
   end
 
 # Updating frame

@@ -1,5 +1,7 @@
 class CGRect
 
+  include ConsoleColors
+
   def bottom
     origin.y + size.height
   end
@@ -14,6 +16,15 @@ class CGRect
 
   def top
     origin.y
+  end
+
+  def to_s
+    [
+      "#{pinkColor}x:#{textReset} #{origin.x}, ",
+      "#{pinkColor}y:#{textReset} #{origin.y}, ",
+      "#{pinkColor}width:#{textReset} #{size.width}, ",
+      "#{pinkColor}height:#{textReset} #{size.height}",
+    ].join("")
   end
 
 end

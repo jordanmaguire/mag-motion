@@ -12,11 +12,13 @@ The name MagMotion is just a combination of my last name (Maguire) and motion. I
 
 ### CGRect
 
-Provide `#top`, `#bottom`, `#left`, and `#right`.
+- Provide `#top`, `#bottom`, `#left`, and `#right`.
+
+- Provide a coloured `#to_s`.
 
 ### UIColor
 
-Provide `#fromRGB(red, green, blue, alpha=1.0)` that accepts integer values and returns the corresponding UIColor. The default iOS implementation requires a fraction of a 255 value. `#fromRGB` handles the conversion for you.
+- Provide `#fromRGB(red, green, blue, alpha=1.0)` that accepts integer values and returns the corresponding UIColor. The default iOS implementation requires a fraction of a 255 value. `#fromRGB` handles the conversion for you.
 
 ```ruby
 UIColor.fromRGB(33, 33, 33)
@@ -31,17 +33,19 @@ UIColor.colorWithRed( 33 / 255.0,
 
 ### UIView
 
-Provide `#addSubviews` for adding multiple subviews.
+- Provide `#addSubviews` for adding multiple subviews.
 
 ```ruby
 view.addSubviews(one, two, three)
 ```
 
-Provide `#top`, `#bottom`, `#left`, and `#right`.
+- Provide `#top`, `#bottom`, `#left`, and `#right`.
 
-Provide `#updateFrame(options)` for updating specific attributes on a UIView's frame.
+- Provide `#updateFrame(options)` for updating specific attributes on a UIView's frame.
 
 ```ruby
 view.updateFrame(x: 100, y: 100, width: 100, height: 100)
 view.updateFrame(x: 50, adjustWidth: true) # Changes origin.x to 50 and size.width to 150
 ```
+
+- Provide a coloured `#to_s`.
