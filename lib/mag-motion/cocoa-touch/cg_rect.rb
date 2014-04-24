@@ -18,13 +18,17 @@ class CGRect
     origin.y
   end
 
-  def to_s
+  def inspect
     [
       "#{pinkColor}x:#{textReset} #{origin.x}, ",
       "#{pinkColor}y:#{textReset} #{origin.y}, ",
       "#{pinkColor}width:#{textReset} #{size.width}, ",
       "#{pinkColor}height:#{textReset} #{size.height}",
     ].join("")
+  end
+
+  def to_s
+    inspect
   end
 
 end
