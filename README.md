@@ -31,4 +31,17 @@ UIColor.colorWithRed( 33 / 255.0,
 
 ### UIView
 
+Provide `#addSubviews` for adding multiple subviews.
+
+```ruby
+view.addSubviews(one, two, three)
+```
+
 Provide `#top`, `#bottom`, `#left`, and `#right`.
+
+Provide `#updateFrame(options)` for updating specific attributes on a UIView's frame.
+
+```ruby
+view.updateFrame(x: 100, y: 100, width: 100, height: 100)
+view.updateFrame(x: 50, adjustWidth: true) # Changes origin.x to 50 and size.width to 150
+```
