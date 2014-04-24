@@ -1,4 +1,4 @@
-# Mag::Motion
+# MagMotion
 
 MagMotion is a colletion of monkey patches and wrappers around Cocoa Touch classes that gives them a more ruby-ish interface.
 
@@ -16,10 +16,17 @@ Provide `#top`, `#bottom`, `#left`, and `#right`.
 
 ### UIColor
 
-Provide `#fromRGB(red, green, blue, alpha=1.0)` that accept integer values and return the corresponding UIColor. The default iOS implementation requires a fraction of a 255 value. This method handles the conversion for you.
+Provide `#fromRGB(red, green, blue, alpha=1.0)` that accepts integer values and returns the corresponding UIColor. The default iOS implementation requires a fraction of a 255 value. `#fromRGB` handles the conversion for you.
 
 ```ruby
 UIColor.fromRGB(33, 33, 33)
+
+# is equivalent to
+
+UIColor.colorWithRed( 33 / 255.0,
+               green: 33 / 255.0,
+                blue: 33 / 255.0,
+               alpha: 1 )
 ```
 
 ### UIView
