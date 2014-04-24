@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'mag/motion/version'
+require 'mag-motion/version'
 
 Gem::Specification.new do |spec|
   spec.name          = "mag-motion"
-  spec.version       = Mag::Motion::VERSION
+  spec.version       = MagMotion::VERSION
   spec.authors       = ["Jordan Maguire"]
   spec.email         = ["jmaguire@thefrontiergroup.com.au"]
   spec.description   = "A collection of ruby-ish monkey patches to Cocoa Touch classes"
