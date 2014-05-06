@@ -41,6 +41,8 @@ view.addSubviews(one, two, three)
 
 - Provide `#top`, `#bottom`, `#left`, and `#right`.
 
+- Provide `#setTopBorderColor(color)` and `#setBottomBorderColor(color)` that will place a 1 point high border on whichever side with the given color.
+
 - Provide `#updateFrame(options)` for updating specific attributes on a UIView's frame.
 
 ```ruby

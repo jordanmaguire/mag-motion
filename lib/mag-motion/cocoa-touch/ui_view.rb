@@ -35,6 +35,22 @@ class UIView
     ].join("")
   end
 
+# Adding a border
+
+  def setTopBorderColor(color)
+    topBorder = CALayer.layer
+    topBorder.frame = CGRectMake(0, 0, size.width, 1)
+    topBorder.backgroundColor = color.CGColor
+    layer.addSublayer(topBorder)
+  end
+
+  def setBottomBorderColor(color)
+    bottomBorder = CALayer.layer
+    bottomBorder.frame = CGRectMake(0, size.height - 1, size.width, 1)
+    bottomBorder.backgroundColor = color.CGColor
+    layer.addSublayer(bottomBorder)
+  end
+
 # Updating frame
 
   # Terse syntax for updating the origin and size of a UIView
