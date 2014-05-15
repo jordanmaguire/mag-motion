@@ -51,3 +51,18 @@ view.updateFrame(x: 50, adjustWidth: true) # Changes origin.x to 50 and size.wid
 ```
 
 - Provide a coloured `#to_s`.
+
+## Modules
+
+### KeyboardHandler
+
+The KeyboardHandler can be included into any subclass on UIView.
+
+You should implement two methods in the class that this module is mixed in to:
+
+- `keyboardWillOpen(userInfo)`
+- `keyboardWillClose(userInfo)`
+
+Do whatever you need to with these events.
+
+The view will begin listening for `UIKeyboardWillShowNotification` and `UIKeyboardWillHideNotification` on `initWithFrame` and stop listening on `dealloc`.
