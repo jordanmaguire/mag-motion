@@ -37,6 +37,12 @@ UIColor.colorWithRed( 33 / 255.0,
 
 ```ruby
 view.addSubviews(one, two, three)
+
+# is equivalent to
+
+view.addSubviews(one)
+view.addSubviews(two)
+view.addSubviews(three)
 ```
 
 - Provide `#top`, `#bottom`, `#left`, and `#right`.
