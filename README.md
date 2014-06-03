@@ -66,3 +66,24 @@ You should implement two methods in the class that this module is mixed in to:
 Do whatever you need to with these events.
 
 The view will begin listening for `UIKeyboardWillShowNotification` and `UIKeyboardWillHideNotification` on `initWithFrame` and stop listening on `dealloc`.
+
+## UIViews
+
+### ConfirmationAlert
+
+A wrapper around BubbleWrap's App.alert that provides an interface I prefer for showing Confirmation Alerts.
+
+Here's a sample of using the interface:
+
+```ruby
+alertView = ConfirmationAlert.new
+alertView.title = "Title"
+alertView.message = "Message"
+alertView.cancelButtonTitle = "Cancel"
+alertView.confirmButtonTitle = "OK"
+alertView.onCancel { puts "Cancel button was touched" }
+alertView.onConfirmed { puts "OK button was touched" }
+alertView.show
+```
+
+TODO: Use UIAlertView by default.
