@@ -67,6 +67,25 @@ Do whatever you need to with these events.
 
 The view will begin listening for `UIKeyboardWillShowNotification` and `UIKeyboardWillHideNotification` on `initWithFrame` and stop listening on `dealloc`.
 
+### ViewNotificationHandler
+
+The ViewNotificationHandler can be included into any subclass on UIView.
+
+ViewNotificationHandler gives your views an easy ruby-like interface for adding observers. It also handles the lifecycle of notifications for you, by removing the observer when the object is dealloc'd.
+
+Add a notification listener like so:
+
+```ruby
+def initWithFrame(frame)
+  super
+
+  obserNotification(:myNotification) do |notification|
+    # Do something here.
+  end
+
+  self
+end
+
 ## UIViews
 
 ### ConfirmationAlert
