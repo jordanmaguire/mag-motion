@@ -85,6 +85,7 @@ def initWithFrame(frame)
 
   self
 end
+```
 
 ## UIViews
 
