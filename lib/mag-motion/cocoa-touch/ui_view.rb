@@ -5,6 +5,10 @@ class UIView
   # By observation and trial and error, I've determined that this is the default animation period
   DEFAULT_ANIMATION_DURATION = 0.3
 
+  def self.animate(&animations)
+    animateWithDuration(DEFAULT_ANIMATION_DURATION, animations: animations)
+  end
+
   def addSubviews(*subviews)
     subviews.each { |subview| addSubview(subview) }
   end

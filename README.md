@@ -33,6 +33,21 @@ UIColor.colorWithRed( 33 / 255.0,
 
 ### UIView
 
+- Provide `.animate` for performing animations with a default duration.
+
+```ruby
+# Instead of
+animations = lambda do
+  # whatever
+end
+UIView.animatedWithDuration(0.3, animations: animations)
+
+# Do
+UIView.animate do
+    # whatever
+end
+```
+
 - Provide `#addSubviews` for adding multiple subviews.
 
 ```ruby
@@ -85,6 +100,7 @@ def initWithFrame(frame)
 
   self
 end
+```
 
 ## UIViews
 
